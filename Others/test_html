@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+	<TITLE>(UU-RPI-G17) Weather Station</TITLE>
+	<LINK rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.icon') }}" >
+	<meta http-equiv="refresh" content="30" />
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/main.css') }}" />
+</HEAD>
+<BODY>
+	<div id="wrapper">
+		<div id="banner">
+			<h1>Weather Station Project</h1>
+			<p>For Course "Introduction to Embedded System" ~ Uppsala University</p>
+			<p> Course code:1DT086 </p>
+		</div>
+			<div class="musleh-middle">
+				<h2>Result from Python Program in Raspberry Pi</h2>
+			</div>
+			<table style="width:100%" id="myTable">
+				<tr>
+					<th><h3>Pressure</h3></th>
+					<th>Temperature</th>
+					<th>Humidity</th>
+					<th><h3>Orientation</h3></th>
+				</tr>
+				<tr>
+					<th><p>{{ pressure }}</p></th>
+					<th><p><strong>Celcius:</strong> {{ celcius }}</p>
+					<p><strong>Fahrenheit:</strong> {{ fahrenheit }}</p></th>
+					<th><p>{{ humidity }}</p></th>
+					<th><p><strong>X:</strong> {{ x }}</p><p><strong>Y:</strong> {{ y }}</p><p><strong>Z:</strong> {{ z }}</p></th>
+				</tr>
+			</table>
+			</br>
+			<div class="musleh-middle">
+				<h3>Result by using "Wia Weather Station" service</h3>
+			</div>
+			<table style="width:100%" id="myTable">
+				<tr>
+					<th><iframe width="350" height="280" allowtransparency="true" scrolling="no" frameborder="no" src="https://widgets.wia.io/embed/wgt_VoKoQ6Rd/dev_iqSxUjJa"></iframe></th>
+					<th><iframe width="350" height="280" allowtransparency="true" scrolling="no" frameborder="no" src="https://widgets.wia.io/embed/wgt_dlcsMyyf/dev_iqSxUjJa"></iframe></th>
+					<th><iframe width="350" height="280" allowtransparency="true" scrolling="no" frameborder="no" src="https://widgets.wia.io/embed/wgt_VaPX9rE9/dev_iqSxUjJa"></iframe></th>
+				</tr>
+				<tr>
+					<td><SPAN style="FONT-SIZE: 20px">The Pressure (mbar sea-level)</SPAN></td>
+					<td><SPAN style="FONT-SIZE: 20px">The Temperature (°C)</SPAN></td>
+					<td><SPAN style="FONT-SIZE: 20px">The Humidity (%)</SPAN></td>
+				</tr>
+			</table>
+			<footer class="musleh">
+				<TD colSpan=3>
+					<BR>All rights reserved © UU-RPI-G17 <BR>
+					<p>Done By Group 17 ~ Mohammad	El Musleh & Archit Ulhas Suryawanshi & Shashank Shekher	Tripathi </p>
+					<SPAN style="FONT-SIZE: 10px">This website is best viewed at 1024x768 or higher.</SPAN>
+				</TD>
+			</footer>
+	</div>
+</BODY>
+</HTML>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+	<TITLE>(UU-RPI-G17) Weather Station</TITLE>
+	<LINK rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.icon') }}" >
+	<meta http-equiv="refresh" content="5" />
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/main.css') }}" />
+</HEAD>
+<BODY>
+	<div id="wrapper">
+		<div id="banner">
+			<h1>Weather Station Project</h1>
+			<p>For Course "Introduction to Embedded System" ~ Uppsala University</p>
+			<p> Course code:1DT086 </p>
+		</div>
+			<div class="musleh-middle">
+				<h2>Result from Python Program in Raspberry Pi</h2>
+			</div>
+			<table style="width:100%" id="myTable">
+				<tr>
+					<th><h3>Pressure (mbar sea-level)</h3></th>
+					<th>Temperature (°C)</th>
+					<th>Humidity  (%)</th>
+					<th><h3>Orientation</h3></th>
+				</tr>
+				<tr>
+					<th><p>{{ pressure }}</p></th>
+					<th><p><strong>Celcius:</strong> {{ celcius }}</p>
+					<p><strong>Fahrenheit:</strong> {{ fahrenheit }}</p></th>
+					<th><p>{{ humidity }}</p></th>
+					<th><p><strong>X:</strong> {{ x }}</p><p><strong>Y:</strong> {{ y }}</p><p><strong>Z:</strong> {{ z }}</p></th>
+				</tr>
+			</table>
+			</br>
+			<footer class="musleh">
+				<TD colSpan=3>
+					<BR>All rights reserved © UU-RPI-G17 <BR>
+					<p>Done By Group 17 ~ Mohammad	El Musleh & Archit Ulhas Suryawanshi & Shashank Shekher	Tripathi </p>
+					<SPAN style="FONT-SIZE: 10px">This website is best viewed at 1024x768 or higher.</SPAN>
+				</TD>
+			</footer>
+	</div>
+</BODY>
+</HTML>
+
